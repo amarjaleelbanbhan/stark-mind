@@ -1,0 +1,105 @@
+{
+ "behaviour": [],
+ "trigger": [
+  [
+   "I noticed my phone battery drains faster in the cold. Why?",
+   true,
+   true
+  ],
+  [
+   "Why do onions make you cry?",
+   true,
+   true
+  ],
+  [
+   "What if humans could photosynthesize?",
+   true,
+   true
+  ],
+  [
+   "How come cats always land on their feet?",
+   true,
+   true
+  ],
+  [
+   "I wonder why some songs get stuck in your head.",
+   true,
+   true
+  ],
+  [
+   "I missed a deadline because I underestimated the work again. What can I learn from that?",
+   true,
+   true
+  ],
+  [
+   "Quick \u2014 why is the ocean salty?",
+   true,
+   true
+  ],
+  [
+   "Deep dive into why ice is slippery.",
+   true,
+   true
+  ],
+  [
+   "Our launch went much better than expected and I want to understand why.",
+   true,
+   true
+  ],
+  [
+   "I just learned that bananas are radioactive. How does that work?",
+   true,
+   true
+  ],
+  [
+   "Fix the failing test in `auth.test.ts`.",
+   false,
+   false
+  ],
+  [
+   "Why does this test fail? `expected 3, got undefined`",
+   false,
+   false
+  ],
+  [
+   "Write a Python function that parses CSV files.",
+   false,
+   false
+  ],
+  [
+   "Rename all `userId` variables to `accountId` in this file.",
+   false,
+   false
+  ],
+  [
+   "Run `npm install` and tell me if it errors.",
+   false,
+   false
+  ],
+  [
+   "Draft an email to my landlord about the broken heater.",
+   false,
+   false
+  ],
+  [
+   "Convert this table to JSON.",
+   false,
+   false
+  ],
+  [
+   "Why is my Docker build failing at step 4?",
+   false,
+   false
+  ],
+  [
+   "Summarize this PDF in five bullet points.",
+   false,
+   false
+  ],
+  [
+   "What's the command to undo my last git commit?",
+   false,
+   false
+  ]
+ ]
+}

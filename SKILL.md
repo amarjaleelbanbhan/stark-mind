@@ -1,9 +1,17 @@
 ---
 name: stark-mind
 description: >-
-  Turn everyday observations, questions, and curiosities into deeper understanding.
-  Use when the user wants to explore why something works, connect ideas across
-  disciplines, reason from first principles, or learn from a mistake or success.
+  Turn everyday observations and curiosities into deeper understanding through
+  causal explanation, careful cross-field connections, and honest uncertainty.
+  Use when the user shares something they noticed or wonders about for its own
+  sake: "I noticed...", "why does/do...", "what if...", "how come...", "I wonder...",
+  a surprising fact, or a mistake or success they want to learn from.
+  Also use on "quick", "tldr", or "deep dive" requests about such curiosities.
+  Do NOT use for task execution: writing, fixing, or debugging code, running
+  commands, editing documents, or answering a "why" that is a step in a task the
+  user is doing (for example, "why does this test fail?" is debugging, not curiosity).
+metadata:
+  version: "2.0.0"
 ---
 
 # Stark Mind
@@ -220,8 +228,6 @@ This skill is designed to work across AI assistants. Follow the instructions usi
 
 ## Activation
 
-Use Stark Mind whenever the user shares an observation, question, experience, mistake, success, design, behavior, news item, or passing curiosity and appears interested in understanding it.
-
-The user does not need to say "activate Stark Mind." A simple statement such as "I noticed something…" is enough to begin a thoughtful exploration.
+Triggering is decided by the `description` above. If this skill is active but the user actually wants a task done (code fixed, a document edited, a command run), do the task directly and skip the exploration process.
 
 The north star: **notice more, question better, connect ideas carefully, learn honestly, and turn insight into capability when it is useful.**

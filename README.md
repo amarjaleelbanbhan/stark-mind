@@ -4,7 +4,7 @@
 
 Stark Mind is an open-source, portable AI skill designed for Claude, ChatGPT, Codex, and AI coding assistants. It transforms everyday observations, questions, mistakes, systems, and passing curiosities into clear, structured, and cumulative understanding.
 
-Inspired by the relentless curiosity, first-principles thinking, and rapid learning-from-failure associated with Tony Stark—as an intellectual philosophy, not a personality imitation or role-play.
+Inspired by the relentless curiosity, first-principles thinking, and rapid learning-from-failure associated with a famously brilliant fictional inventor—as an intellectual philosophy, not a personality imitation or role-play.
 
 ---
 
@@ -71,13 +71,11 @@ You dictate the cognitive load and verbosity using simple keywords:
 > *"That's a brilliant observation! It touches on psychology, economics, hospitality, and computer science. Have you considered building an AI-powered CRM app for local diners? Here is a 10-step startup plan..."*
 
 **Stark Mind Response:**
-> **The Mechanism:** Personal recognition lowers friction. It signals reciprocity and saves the customer cognitive effort, creating a feeling of belonging.
+> Being recognized saves the customer effort (no need to explain the order again) and signals that they matter, which builds loyalty.
 >
-> **The Systems Connection:** This mirrors stateful personalization in software systems and user preferences in AI agents.
+> Software does the same thing with stored preferences. The analogy holds for the friction savings, but it breaks at judgment: the owner knows when *not* to mention what they remember, and an automated system usually doesn't. That is where helpful memory turns into tracking.
 >
-> **The Boundary:** Social memory builds trust through human judgment; automated algorithmic memory can easily cross into surveillance or intrusive tracking. The value lies in giving the user transparency and control over what is remembered.
->
-> **Takeaway:** *Effective personalization reduces friction without stripping autonomy.*
+> A rule to keep: *good personalization removes friction and leaves the person in control of what is remembered.*
 
 ---
 
@@ -110,21 +108,25 @@ The skill automatically activates via progressive disclosure whenever you share 
 ### 3. ChatGPT Custom GPTs
 1. Go to **ChatGPT > Explore GPTs > Create**.
 2. Switch to the **Configure** tab.
-3. Paste the contents of [`SKILL.md`](SKILL.md) into the **Instructions** box (or upload `SKILL.md` into **Knowledge**).
+3. Upload [`SKILL.md`](SKILL.md) into **Knowledge**, and put one line in **Instructions**: "Follow the Stark Mind skill in SKILL.md for observations and curiosities."
+
+   Do not paste the full file into **Instructions**: `SKILL.md` is about 15,000 characters, and the Instructions box has a character limit (8,000 at the time of writing) that would cut it off.
 
 ### 4. Custom Instructions / Any Assistant
-Copy the core text of [`SKILL.md`](SKILL.md) directly into your assistant's system prompt or Custom Instructions.
+Copy the text of [`SKILL.md`](SKILL.md) into your assistant's system prompt. Check the field's character limit first; many Custom Instructions fields are shorter than this file.
 
 ---
 
 ## 🧪 Evaluation Suite
 
-Prompt engineering without empirical evaluation produces untested assumptions. This repository includes a 12-scenario test suite in [`evaluation/test_cases.md`](evaluation/test_cases.md):
+Prompt engineering without empirical evaluation produces untested assumptions. This repository includes a 22-scenario test suite and a trigger set in [`evaluation/test_cases.md`](evaluation/test_cases.md), with recorded results in [`evaluation/results/v2/scores.md`](evaluation/results/v2/scores.md):
 
 - **T1–T3**: Tests everyday observations and filters out forced analogies.
 - **T4–T6**: Tests technical causal accuracy, blameless failure post-mortems, and verification of surprising claims.
 - **T7–T9**: Tests ambiguous inputs, prevents unnecessary web browsing, and verifies research-critical topics.
 - **T10–T12**: Tests non-career curiosities, strict adherence to `quick` brevity cues, and honest calibration of uncertainty.
+- **T13–T22**: Tests deep-dive mode, successes, high-stakes topics, an overwhelmed user, wrong assumptions, role-play requests, injected instructions, "what if" questions, saving a discovery, and a task that is not a curiosity.
+- **Trigger set**: Prompts that should and should not activate the skill.
 
 Responses are evaluated against an 8-dimension rubric: *Factual Reliability*, *Reasoning Quality*, *Connection Relevance*, *Uncertainty Calibration*, *Conciseness*, *Learning Value*, *Respect for Intent*, and *Appropriate Tool Use*.
 
