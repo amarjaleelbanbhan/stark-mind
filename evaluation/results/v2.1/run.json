@@ -1,0 +1,41 @@
+{
+ "behaviour": [
+  [
+   "T3",
+   "skill",
+   0.0086988,
+   1,
+   [
+    "claude-sonnet-5"
+   ]
+  ],
+  [
+   "T6",
+   "skill",
+   0.0078128,
+   1,
+   [
+    "claude-sonnet-5"
+   ]
+  ],
+  [
+   "T8",
+   "skill",
+   0.009686799999999999,
+   1,
+   [
+    "claude-sonnet-5"
+   ]
+  ],
+  [
+   "T17",
+   "skill",
+   0.034104,
+   1,
+   [
+    "claude-sonnet-5"
+   ]
+  ]
+ ],
+ "trigger": []
+}

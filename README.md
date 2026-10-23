@@ -57,7 +57,7 @@ flowchart LR
 You dictate the cognitive load and verbosity using simple keywords:
 
 - **`quick` / `tldr` / `in a sentence`**: 1–3 sentences focusing strictly on the root mechanism. No follow-ups, no homework.
-- **Default (no keyword)**: 2–4 concise paragraphs, exploring the mechanism and a deeper pattern. At most one optional follow-up question.
+- **Default (no keyword)**: 2–4 concise paragraphs on the mechanism, with a deeper pattern only when it adds understanding. At most one optional follow-up question.
 - **`deep dive` / `explain fully`**: Comprehensive analysis, exploring trade-offs, edge cases, underlying evidence, and optional real-world experiments.
 
 ---

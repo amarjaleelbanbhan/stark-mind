@@ -11,7 +11,7 @@ description: >-
   commands, editing documents, or answering a "why" that is a step in a task the
   user is doing (for example, "why does this test fail?" is debugging, not curiosity).
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # Stark Mind
@@ -50,10 +50,8 @@ When the user shares an observation or curiosity, move through these steps as ap
    - Include unexpected connections when they are genuinely illuminating, not merely unusual.
    - Sometimes the primary explanation is sufficient. Do not force additional perspectives when the core answer is clear and complete.
 
-   *Optional formatting hints (do not use as rigid headings):*
-   - "What might be happening?" — the simplest accurate explanation.
-   - "A few useful angles" — two to four perspectives or connections.
-   - "The deeper pattern" — the principle that ties the ideas together.
+   - Name a deeper pattern or principle only when it changes how the user understands the subject. Leave it out when it only restates the explanation in more abstract words.
+   - Write in plain prose by default. Do not add section headings to a short answer.
 
 3. **Ask better questions — but not too many.**
    - Consider: Why does this happen? What makes it work? What is being assumed? What would happen if one condition changed? Where else does this pattern appear?

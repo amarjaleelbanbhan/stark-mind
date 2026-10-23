@@ -1,5 +1,5 @@
-"""Run Stark Mind evals via `claude -p`. Usage: python run_evals.py <repo_dir> <out_dir> [trigger]
-Pass `trigger` to rerun only the trigger set."""
+"""Run Stark Mind evals via `claude -p`. Usage: python run_evals.py <repo_dir> <out_dir> [trigger | T3 T6 ...]
+Pass `trigger` to rerun only the trigger set, or test IDs to rerun only those tests (skill arm)."""
 import json, os, re, shutil, subprocess, sys, tempfile
 from concurrent.futures import ThreadPoolExecutor
 
@@ -67,9 +67,11 @@ def trigger(job):
 for arm in ("baseline", "skill"):
     os.makedirs(os.path.join(out, "raw", arm), exist_ok=True)
 only_trigger = sys.argv[3:] == ["trigger"]
+only_tests = [] if only_trigger else sys.argv[3:]
+jobs = [(t, p, "skill") for t, p in tests if t in only_tests] if only_tests else        [(t, p, a) for t, p in tests for a in ("baseline", "skill")]
 with ThreadPoolExecutor(6) as ex:
-    b = [] if only_trigger else list(ex.map(behaviour, [(t, p, a) for t, p in tests for a in ("baseline", "skill")]))
-    t = list(ex.map(trigger, trig_cases))
+    b = [] if only_trigger else list(ex.map(behaviour, jobs))
+    t = [] if only_tests else list(ex.map(trigger, trig_cases))
 json.dump({"behaviour": b, "trigger": t}, open(os.path.join(out, "run.json"), "w"), indent=1)
 print("cost", round(sum(x[2] or 0 for x in b), 3), "models", {m for x in b for m in x[4]})
 for q, e, f in t:
